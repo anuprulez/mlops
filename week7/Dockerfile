@@ -1,4 +1,5 @@
 FROM huggingface/transformers-pytorch-cpu:latest
+FROM python:3.8.8
 
 COPY ./ /app
 WORKDIR /app
@@ -11,10 +12,12 @@ ARG AWS_SECRET_ACCESS_KEY
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 
+RUN export AWS_ACCESS_KEY_ID
+RUN export AWS_SECRET_ACCESS_KEY
 
 # install requirements
 RUN pip install "dvc[s3]"   # since s3 is the remote storage
-RUN pip install -r requirements_inference.txt
+#RUN pip install -r requirements_inference.txt
 
 # initialise dvc
 RUN dvc init --no-scm -f
@@ -25,7 +28,7 @@ RUN dvc remote add -d model-store s3://models-dvc/trained_models/
 RUN cat .dvc/config
 
 # pulling the trained model
-RUN dvc pull models/model.onnx
+RUN dvc pull models/model.onnx.dvc
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
