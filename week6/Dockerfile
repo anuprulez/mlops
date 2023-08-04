@@ -1,7 +1,7 @@
 FROM huggingface/transformers-pytorch-cpu:latest
 FROM python:3.8.8
 COPY ./ /app
-
+WORKDIR /app
 
 
 ENV PYTHON_VERSION=3.8
@@ -25,8 +25,6 @@ RUN dvc remote modify storage gdrive_service_account_json_file_path week6/galaxy
 # pulling the trained model
 RUN dvc pull dvcfiles/trained_model.dvc
 
-
-WORKDIR /app
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 EXPOSE 8000
