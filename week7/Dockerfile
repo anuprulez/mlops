@@ -25,7 +25,7 @@ RUN dvc remote add -d model-store s3://models-dvc/trained_models/
 RUN cat .dvc/config
 
 # pulling the trained model
-RUN dvc pull models/model.onnx.dvc
+RUN dvc pull models/model.onnx
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
