@@ -1,0 +1,76 @@
+{
+    "os": "Linux-5.4.0-150-generic-x86_64-with-glibc2.17",
+    "python": "3.8.17",
+    "heartbeatAt": "2023-08-03T14:34:35.840190",
+    "startedAt": "2023-08-03T14:34:33.757355",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "git": {
+        "remote": "git@github.com:anuprulez/mlops",
+        "commit": "ef50ef3ce5c6ec704fd002ff1596f1863180d39e"
+    },
+    "email": "anup.rulez@gmail.com",
+    "root": "/home/anupkumar/mlops/mlops",
+    "host": "anupkumar-HP-ProBook-450-G5",
+    "username": "anupkumar",
+    "executable": "/home/anupkumar/anaconda3/envs/ml-ops/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 763.1985,
+        "min": 400.0,
+        "max": 4000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 800.271,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 622.558,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 800.343,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 759.559,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 777.399,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 787.739,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 798.981,
+            "min": 400.0,
+            "max": 4000.0
+        },
+        {
+            "current": 758.738,
+            "min": 400.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "total": 233.17998886108398,
+        "used": 217.56145095825195
+    },
+    "memory": {
+        "total": 7.6658477783203125
+    }
+}

@@ -1,0 +1,63 @@
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+Map: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8551/8551 [00:00<00:00, 16482.97 examples/s]
+Map: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1043/1043 [00:00<00:00, 14119.14 examples/s]
+  | Name                   | Type                          | Params
+-------------------------------------------------------------------------
+0 | bert                   | BertForSequenceClassification | 4.4 M
+1 | train_accuracy_metric  | BinaryAccuracy                | 0
+2 | val_accuracy_metric    | BinaryAccuracy                | 0
+3 | f1_metric              | BinaryF1Score                 | 0
+4 | precision_macro_metric | BinaryPrecision               | 0
+5 | recall_macro_metric    | BinaryRecall                  | 0
+6 | precision_micro_metric | BinaryPrecision               | 0
+7 | recall_micro_metric    | BinaryRecall                  | 0
+-------------------------------------------------------------------------
+4.4 M     Trainable params
+0         Non-trainable params
+4.4 M     Total params
+17.545    Total estimated model params size (MB)
+/home/anupkumar/anaconda3/envs/ml-ops/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:432: PossibleUserWarning: The dataloader, val_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  rank_zero_warn(
+/home/anupkumar/anaconda3/envs/ml-ops/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 64. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Sanity Checking DataLoader 0: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  8.83it/s]
+/home/anupkumar/anaconda3/envs/ml-ops/lib/python3.8/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:432: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 8 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0: 100%|███████████████████████████████████████████████████████████████| 134/134 [01:04<00:00,  2.07it/s, v_num=in09, train/loss_step=0.609, train/acc_step=0.692]
+
+
+Validation DataLoader 0: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 17/17 [00:03<00:00,  4.89it/s]
+/home/anupkumar/anaconda3/envs/ml-ops/lib/python3.8/site-packages/pytorch_lightning/utilities/data.py:76: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 19. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  warning_cache.warn(
+Metric valid/loss improved. New best score: 0.618
+
+`Trainer.fit` stopped: `max_epochs=1` reached.
